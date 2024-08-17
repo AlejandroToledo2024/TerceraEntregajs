@@ -1,0 +1,9 @@
+.flex-container {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  border: 1px solid brown;
+}
+img{
+    width: 80px;
+}
