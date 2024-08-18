@@ -16,6 +16,22 @@ header {
   width: 100%;
   height: 100%;
 }
+.text-overlay{
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 200%; /* Centra verticalmente el texto */
+    left: 25%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el texto en el medio */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Color del texto */
+    padding: 1rem;
+    border-radius: 8px; /* Opcional: redondea los bordes del fondo del texto */
+    transition:opacity 0.5s ease-in-out;
+}
+.flex-container:hover .text {
+    opacity: 1;
+}
+
+
 .logo {
   height: 80px;
   width: 80px;
