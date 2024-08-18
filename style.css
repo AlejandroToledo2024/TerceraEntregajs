@@ -112,3 +112,21 @@ header {
     text-align: center;
   }
 }
+section {
+  margin-top: 20px;
+  display: flex;
+  height: 248px;
+  width: 430px;
+}
+section img {
+  flex-grow: 1;
+  object-fit: cover;
+  padding: 5px;
+}
+/* 
+section img:hover {
+  cursor: crosshair;
+  
+  opacity: 1;
+  filter: contrast (120%);
+} */
