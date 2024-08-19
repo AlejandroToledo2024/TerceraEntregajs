@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); 
+*{
+  font-family: jost;
+}
 header {
   margin: 0;
   padding: 0;
@@ -27,9 +31,7 @@ header {
     border-radius: 8px; /* Opcional: redondea los bordes del fondo del texto */
     transition:opacity 0.5s ease-in-out;
 }
-.flex-container:hover .text {
-    opacity: 1;
-}
+
 
 
 .logo {
@@ -115,18 +117,16 @@ header {
 section {
   margin-top: 20px;
   display: flex;
-  height: 248px;
-  width: 430px;
+  height:375px;
+  width: 200px;
 }
-section img {
+.galeria img {
   flex-grow: 1;
   object-fit: cover;
-  padding: 5px;
+  padding: 10px;
+  transition: transform 300ms ease-in; /* Cambiado de 0.3ms a 300ms */
 }
-/* 
-section img:hover {
-  cursor: crosshair;
-  
-  opacity: 1;
-  filter: contrast (120%);
-} */
+
+.galeria img:hover {
+  transform: scale(1.2); /* Agranda la imagen al hacer hover */
+}
