@@ -2,10 +2,52 @@
 *{
   font-family: jost;
 }
-body{
-  background-image: linear-gradient(to left  #A17277 , #454451);
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ccc;
+}
+
+.mode-dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.mode-dark button {
+  background-color: #555555;
+  color: #ffffff;
+}
+.bcardContainer{
+  display: flexbox;
+}
+
+.card{
+    
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 300px;
+  margin: 16px;
+  background-color: #fff;
+ display: block;
+ /* position: absolute; */
+  
+  
+ 
+
+}
 .flex-container {
   position: relative;
   height: 80%;
@@ -87,7 +129,7 @@ body{
   text-decoration: none;
 }
 
-/* Estilos para el menú hamburguesa en dispositivos móviles */
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -122,9 +164,9 @@ section {
   flex-grow: 1;
   object-fit: cover;
   padding: 10px;
-  transition: transform 300ms ease-in; /* Cambiado de 0.3ms a 300ms */
+  transition: transform 300ms ease-in; 
 }
 
 .galeria img:hover {
-  transform: scale(1.2); /* Agranda la imagen al hacer hover */
+  transform: scale(1.2);
 }
