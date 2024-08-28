@@ -36,8 +36,21 @@ button {
   background-color: #555555;
   color: #ffffff;
 }
-.bcardContainer{
-  display: flexbox;
+.cardContainer{
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mostrarCarrito{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 
 .card{

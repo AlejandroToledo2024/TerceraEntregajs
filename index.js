@@ -1,4 +1,4 @@
-let carrito = [] ;
+let carrito = [];
 const cardData = [
   {
     id: 1,
@@ -58,10 +58,11 @@ const cardData = [
   },
 ];
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const contenedorDeCartas = document.getElementById("contenedorDeCartas");
 
-  function createCatalogo(nombre, descripcion, imageUrl, id , precio) {
+  function createCatalogo(nombre, descripcion, imageUrl, precio) {
     const card = document.createElement("div");
     card.className = "card";
 
@@ -75,19 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardDescription = document.createElement("p");
     cardDescription.textContent = descripcion;
 
+    const cardPrice = document.createElement("p");
+    cardPrice.textContent = `Precio: ${precio}`;
+
     card.appendChild(cardImage);
     card.appendChild(cardTitle);
     card.appendChild(cardDescription);
+    card.appendChild(cardPrice);
 
     return card;
   }
-  cardData.forEach((data ) => {
-    const card = createCatalogo(
-      data.Nombre,
-      data.descripcion,
-      data.imageUrl,
-      
-    );
+
+  // Crear y mostrar las tarjetas de productos
+  cardData.forEach((data) => {
+    const card = createCatalogo(data.Nombre, data.descripcion, data.imageUrl, data.precio);
     const botonAdd = document.createElement("button");
     botonAdd.textContent = "Agregar al carrito";
     botonAdd.classList = "nuevoBtn";
@@ -95,43 +97,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     card.appendChild(botonAdd);
     contenedorDeCartas.appendChild(card);
-    botonAdd.addEventListener ( 'click' , () => {
-      const product = data;
+
+    // Agregar producto al carrito y guardarlo en localStorage
+    botonAdd.addEventListener("click", () => {
       carrito.push({
-        nombre:product.Nombre,
-        precio:product.precio,
-        
+        nombre: data.Nombre,
+        descripcion: data.descripcion,
+        imageUrl: data.imageUrl,
+        precio: data.precio,
+      });
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+    });
+  });
 
-      })
-      localStorage.setItem('carrito', JSON.stringify(carrito));
+  // Mostrar el carrito al hacer clic en el botón
+  document.getElementById("mostarCarro").addEventListener("click", () => {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carritoContainer = document.getElementById("carritoContainer");
 
-    } )
+  
+
+    carrito.forEach((data, index) => {
+      const card = createCatalogo(data.nombre, data.descripcion, data.imageUrl, data.precio);
+      const botonRem = document.createElement("button");
+      botonRem.textContent = "Borrar del carrito";
+      botonRem.classList = "nuevoBtn";
+      botonRem.id = index;
+
+      card.appendChild(botonRem);
+      carritoContainer.appendChild(card);
+
+      // Eliminar el producto del carrito
+      botonRem.addEventListener("click", () => {
+        carrito.splice(index, 1); 
+        localStorage.setItem("carrito", JSON.stringify(carrito)); 
+        carritoContainer.removeChild(card); 
+      });
+    });
   });
 });
 
-carrito.forEach((data)=> { 
-  const card = createCatalogo(
-    data.nombre,
-    data.descripcion,
-    data.imageUrl,
-  )
-  const botonRem = document.createElement("button");
-    botonAdd.textContent = "borrar Carrito";
-    botonAdd.classList = "nuevoBtn";
-    botonAdd.id = data.id;
-    card.appendChild(botonRem);
-    body.appendChild(card);
-    botonRem.addEventListener('click' , () =>{
-      const product = data;
-      carrito.filter ({
-        nombre: product.Nombre,
-        precio:product.precio
-      })
-      localStorage.removeItem('carrito', JSON.parse(carrito));
-    })
-
-
-})
 
 let modo = localStorage.getItem("Modo");
 
@@ -173,7 +178,3 @@ document.addEventListener("DOMContentLoaded", function () {
     cambiarTexto();
   });
 });
-
-
-
-
