@@ -1,3 +1,4 @@
+let carrito = [] ;
 const cardData = [
   {
     id: 1,
@@ -60,7 +61,7 @@ const cardData = [
 document.addEventListener("DOMContentLoaded", function () {
   const contenedorDeCartas = document.getElementById("contenedorDeCartas");
 
-  function createCard(nombre, descripcion, imageUrl, id , precio) {
+  function createCatalogo(nombre, descripcion, imageUrl, id , precio) {
     const card = document.createElement("div");
     card.className = "card";
 
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return card;
   }
   cardData.forEach((data ) => {
-    const card = createCard(
+    const card = createCatalogo(
       data.Nombre,
       data.descripcion,
       data.imageUrl,
@@ -99,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       carrito.push({
         nombre:product.Nombre,
         precio:product.precio,
-        descripcion:product.descripcion
+        
 
       })
       localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -107,6 +108,30 @@ document.addEventListener("DOMContentLoaded", function () {
     } )
   });
 });
+
+carrito.forEach((data)=> { 
+  const card = createCatalogo(
+    data.nombre,
+    data.descripcion,
+    data.imageUrl,
+  )
+  const botonRem = document.createElement("button");
+    botonAdd.textContent = "borrar Carrito";
+    botonAdd.classList = "nuevoBtn";
+    botonAdd.id = data.id;
+    card.appendChild(botonRem);
+    body.appendChild(card);
+    botonRem.addEventListener('click' , () =>{
+      const product = data;
+      carrito.filter ({
+        nombre: product.Nombre,
+        precio:product.precio
+      })
+      localStorage.removeItem('carrito', JSON.parse(carrito));
+    })
+
+
+})
 
 let modo = localStorage.getItem("Modo");
 
@@ -149,8 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let carrito = [];
 
-const botones = document.querySelectorAll('.nuevoBtn');
 
-botones
+
