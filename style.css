@@ -2,6 +2,15 @@
 *{
   font-family: jost;
 }
+.nuevoBtnCarro{
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+}
 .nuevoBtn {
   background-color: #007BFF;
   color: white;
@@ -25,6 +34,9 @@ button {
   cursor: pointer;
   background-color: #000000;
   color: #ccc;
+}
+h2{
+  text-align: center;
 }
 
 .mode-dark {
@@ -184,10 +196,10 @@ section {
 .galeria img {
   flex-grow: 1;
   object-fit: cover;
-  padding: 10px;
+  padding: 5px;
   transition: transform 300ms ease-in; 
 }
 
 .galeria img:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }

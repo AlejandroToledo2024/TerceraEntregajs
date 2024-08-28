@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Eliminar el producto del carrito
       botonRem.addEventListener("click", () => {
-        carrito.splice(index, 1); 
+        carrito.splice(index); 
         localStorage.setItem("carrito", JSON.stringify(carrito)); 
         carritoContainer.removeChild(card); 
       });
