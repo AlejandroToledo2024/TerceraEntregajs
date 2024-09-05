@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/TerceraEntregajs/style.css" />
-    
 
     <title>Tercera entrega</title>
   </head>
@@ -50,6 +50,13 @@
         </nav>
       </div>
     </header>
+    <div  
+    data-aos="fade-up"
+    data-aos-duration="3000"
+    >
+      <h2>Conozca mas Sobre Nosotros</h2>
+    </div>
+
     <section class="galeria">
       <img src="/TerceraEntregajs/assets/escalera.jpg" alt="" />
       <img src="/TerceraEntregajs/assets/escritorio.jpg" alt="" />
@@ -58,8 +65,22 @@
       <img src="/TerceraEntregajs/assets/mesa bar.jpg" alt="" />
       <img src="/TerceraEntregajs/assets/mesa de luz.jpg" alt="" />
     </section>
-
+    <section class="presentacionPage">
+      <div
+        class="imgPresentacion"
+        data-aos="fade-right"
+        data-aos-duration="3000"
+      >
+        <img
+          src="/TerceraEntregajs/assets/carpinteria trabajo.jpg"
+          alt="muestra del trabajo en la carpinteria"
+        />
+      </div></section>
+      
     <script src="/TerceraEntregajs/index.js"></script>
-   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
