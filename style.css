@@ -253,3 +253,12 @@ section {
     max-width: 100%; /* Asegura que ambos divs ocupen todo el ancho en móviles */
   }
 }
+/*Footer-------------------*/
+.footer {
+  margin-top: 100px ;
+  background-color: #53777d;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  width: 98%;
+}
