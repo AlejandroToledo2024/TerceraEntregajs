@@ -59,6 +59,20 @@ const cardData = [
     imageUrl: "../assets/d5c19eed1c67ba36308ece909f8f06e3-Photoroom.jpg",
     precio: 5000,
   },
+  {
+    id: 9,
+    Nombre: "Mesa Ratona",
+    descripcion: "Mesa ratona moderna con diseño elegante, ideal para salas de estar, disponible en varios colores",
+    imageUrl: "../assets/0ebb3b93-622e-4bd2-9099-01b0a395fd22-Photoroom.jpg",
+    precio: 3000
+  },
+  {
+    id: 10,
+    Nombre: "Silla de Oficina",
+    descripcion: "Silla ergonómica de oficina con respaldo ajustable y ruedas, disponible en varios colores",
+    imageUrl: "../assets/Greta-Tapizado-Negro-scaled.webp",
+    precio: 6500
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {

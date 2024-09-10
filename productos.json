@@ -1,59 +1,72 @@
 [
-    {
-      "id": 1,
-      "Nombre": "Juego de Comedor",
-      "descripcion": "disponible en varios colores y medidas a eleccion",
-      "imageUrl": "..//assets/Jgo comedor-Photoroom.jpg",
-      "precio": 7000
-    },
-    {
-      "id": 2,
-      "Nombre": "Sommier 1 Plaza",
-      "descripcion": "base firme de madera y colchon muy comodo",
-      "imageUrl": "../assets/sommier 1 plaza.jpg",
-      "precio": 4500
-    },
-    {
-      "id": 3,
-      "Nombre": "Sommier 2 plazas",
-      "descripcion": "Base reforzada colchon soporta peso hasta 200kg",
-      "imageUrl": "../assets/sommier 2 plazas.png",
-      "precio": 9000
-    },
-    {
-      "id": 4,
-      "Nombre": "Escritorio PC",
-      "descripcion": "Escritorio PC comodo y confortable para el trabajo diario",
-      "imageUrl": "../assets/escritorio-Photoroom.jpg",
-      "precio": 7500
-    },
-    {
-      "id": 5,
-      "Nombre": "Mueble Cocina",
-      "descripcion": "Mueble para cocina muy espacioso y con gran lugar de almacenamiento, disponible en varios colores",
-      "imageUrl": "../assets/Mueble Cocina-Photoroom.jpg",
-      "precio": 12000
-    },
-    {
-      "id": 6,
-      "Nombre": "Bar esquinero",
-      "descripcion": "Bar compacto ideal para espacio reducido, en varios colores",
-      "imageUrl": "../assets/Bar Mueble-Photoroom.jpg",
-      "precio": 7500
-    },
-    {
-      "id": 7,
-      "Nombre": "Placard de Dormitorio 6 puertas",
-      "descripcion": "Placard de Dormitorio con divisiones cómodas para toda la familia. Disponible en varios colores",
-      "imageUrl": "../assets/placard 6 puertas-Photoroom.jpg",
-      "precio": 10000
-    },
-    {
-      "id": 8,
-      "Nombre": "Bibliotecas",
-      "descripcion": "Bibliotecas para almacenamiento personal y gran elegancia disponible en varios colores",
-      "imageUrl": "../assets/d5c19eed1c67ba36308ece909f8f06e3-Photoroom.jpg",
-      "precio": 5000
-    }
-  ]
-  
+  {
+    "id": 1,
+    "Nombre": "Juego de Comedor",
+    "descripcion": "disponible en varios colores y medidas a eleccion",
+    "imageUrl": "..//assets/Jgo comedor-Photoroom.jpg",
+    "precio": 7000
+  },
+  {
+    "id": 2,
+    "Nombre": "Sommier 1 Plaza",
+    "descripcion": "base firme de madera y colchon muy comodo",
+    "imageUrl": "../assets/sommier 1 plaza.jpg",
+    "precio": 4500
+  },
+  {
+    "id": 3,
+    "Nombre": "Sommier 2 plazas",
+    "descripcion": "Base reforzada colchon soporta peso hasta 200kg",
+    "imageUrl": "../assets/sommier 2 plazas.png",
+    "precio": 9000
+  },
+  {
+    "id": 4,
+    "Nombre": "Escritorio PC",
+    "descripcion": "Escritorio PC comodo y confortable para el trabajo diario",
+    "imageUrl": "../assets/escritorio-Photoroom.jpg",
+    "precio": 7500
+  },
+  {
+    "id": 5,
+    "Nombre": "Mueble Cocina",
+    "descripcion": "Mueble para cocina muy espacioso y con gran lugar de almacenamiento, disponible en varios colores",
+    "imageUrl": "../assets/Mueble Cocina-Photoroom.jpg",
+    "precio": 12000
+  },
+  {
+    "id": 6,
+    "Nombre": "Bar esquinero",
+    "descripcion": "Bar compacto ideal para espacio reducido, en varios colores",
+    "imageUrl": "../assets/Bar Mueble-Photoroom.jpg",
+    "precio": 7500
+  },
+  {
+    "id": 7,
+    "Nombre": "Placard de Dormitorio 6 puertas",
+    "descripcion": "Placard de Dormitorio con divisiones cómodas para toda la familia. Disponible en varios colores",
+    "imageUrl": "../assets/placard 6 puertas-Photoroom.jpg",
+    "precio": 10000
+  },
+  {
+    "id": 8,
+    "Nombre": "Bibliotecas",
+    "descripcion": "Bibliotecas para almacenamiento personal y gran elegancia disponible en varios colores",
+    "imageUrl": "../assets/d5c19eed1c67ba36308ece909f8f06e3-Photoroom.jpg",
+    "precio": 5000
+  },
+  {
+    "id": 9,
+    "Nombre": "Mesa Ratona",
+    "descripcion": "Mesa ratona moderna con diseño elegante, ideal para salas de estar, disponible en varios colores",
+    "imageUrl": "../assets/0ebb3b93-622e-4bd2-9099-01b0a395fd22-Photoroom.jpg",
+    "precio": 3000
+  },
+  {
+    "id": 10,
+    "Nombre": "Silla de Oficina",
+    "descripcion": "Silla ergonómica de oficina con respaldo ajustable y ruedas, disponible en varios colores",
+    "imageUrl": "../assets/Greta-Tapizado-Negro-scaled.webp",
+    "precio": 6500
+  }
+]
