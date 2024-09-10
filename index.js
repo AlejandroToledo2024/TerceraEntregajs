@@ -41,3 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     cambiarTexto();
   });
 });
+setTimeout(() => {Swal.fire("No te olvides de seguirnos en nuetras redes sociales y no perderte nuestros sorteos");
+
+}, 4000); 

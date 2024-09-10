@@ -114,6 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {
         precio: data.precio,
       });
       localStorage.setItem("carrito", JSON.stringify(carrito));
+      Toastify({
+
+        text:`${data.Nombre} fue agregado al carrito`,
+        
+        duration: 3000
+        
+        }).showToast();
     });
   });
 
@@ -142,6 +149,13 @@ document.addEventListener("DOMContentLoaded", function () {
         carrito.splice(index);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         carritoContainer.removeChild(card);
+        Toastify({
+
+          text:"Se ha eliminado Correctamente",
+          
+          duration: 3000
+          
+          }).showToast();
       });
     });
   });
