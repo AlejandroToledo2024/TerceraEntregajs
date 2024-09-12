@@ -40,9 +40,9 @@ h2 {
 }
 
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   padding: 16px;
   max-width: 300px;
   margin: 16px;
@@ -216,6 +216,7 @@ section {
   border-radius: 4px;
   cursor: pointer;
   align-items: center;
+  animation:scale-down-center 0.4s;  @keyframes scale-down-center{0%{transform:scale(1)}100%{transform:scale(.5)}}
 }
 .nuevoBtn {
   background-color: #007bff;
