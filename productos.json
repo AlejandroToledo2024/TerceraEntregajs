@@ -3,21 +3,21 @@
     "id": 1,
     "Nombre": "Juego de Comedor",
     "descripcion": "disponible en varios colores y medidas a eleccion",
-    "imageUrl": "..//assets/Jgo comedor-Photoroom.jpg",
+    "imageUrl": "../assets/Jgo-comedor-Photoroom.jpg",
     "precio": 7000
   },
   {
     "id": 2,
     "Nombre": "Sommier 1 Plaza",
     "descripcion": "base firme de madera y colchon muy comodo",
-    "imageUrl": "../assets/sommier 1 plaza.jpg",
+    "imageUrl": "../assets/sommier-1-plaza.jpg",
     "precio": 4500
   },
   {
     "id": 3,
     "Nombre": "Sommier 2 plazas",
     "descripcion": "Base reforzada colchon soporta peso hasta 200kg",
-    "imageUrl": "../assets/sommier 2 plazas.png",
+    "imageUrl": "../assets/sommier2.png",
     "precio": 9000
   },
   {
@@ -31,21 +31,21 @@
     "id": 5,
     "Nombre": "Mueble Cocina",
     "descripcion": "Mueble para cocina muy espacioso y con gran lugar de almacenamiento, disponible en varios colores",
-    "imageUrl": "../assets/Mueble Cocina-Photoroom.jpg",
+    "imageUrl": "../assets/Mueble-Cocina-Photoroom.jpg",
     "precio": 12000
   },
   {
     "id": 6,
     "Nombre": "Bar esquinero",
     "descripcion": "Bar compacto ideal para espacio reducido, en varios colores",
-    "imageUrl": "../assets/Bar Mueble-Photoroom.jpg",
+    "imageUrl": "../assets/Bar-Mueble-Photoroom.jpg",
     "precio": 7500
   },
   {
     "id": 7,
     "Nombre": "Placard de Dormitorio 6 puertas",
     "descripcion": "Placard de Dormitorio con divisiones cómodas para toda la familia. Disponible en varios colores",
-    "imageUrl": "../assets/placard 6 puertas-Photoroom.jpg",
+    "imageUrl": "../assets/placard-6-puertas-Photoroom.jpg",
     "precio": 10000
   },
   {
