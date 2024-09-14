@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function cambiarTexto() {
     if (cuerpo.classList.contains("mode-dark")) {
-      boton.textContent = "Modo Claro";
+      boton.textContent = "🌞";
       boton.style.backgroundColor = "white";
       boton.style.color = "black";
     } else {
-      boton.textContent = "Modo Oscuro";
+      boton.textContent = "🌙";
       boton.style.backgroundColor = "black";
       boton.style.color = "white";
     }
