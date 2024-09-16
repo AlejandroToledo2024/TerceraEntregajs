@@ -28,47 +28,42 @@ function agregarAlCarrito(item) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
   Toastify({
     text: `${item.Nombre} fue agregado al carrito`,
-
     duration: 3000,
   }).showToast();
 }
-
-
 
 document.getElementById("mostarCarro").addEventListener("click", () => {
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   const carritoContainer = document.getElementById("carritoContainer");
 
-  carrito.forEach((data, index) => {
+  carrito.forEach((item) => {
     const card = document.createElement("div");
     card.innerHTML = `
     <div class="card">
-      <img src= ${data.imageUrl} alt="Imagen del producto">
-      <h2>${data.Nombre}</h2>
-      <p>${data.descripcion}</p>
-      <p>$${data.precio}</p>
+      <img src= ${item.imageUrl} alt="Imagen del producto">
+      <h2>${item.Nombre}</h2>
+      <p>${item.descripcion}</p>
+      <p>$${item.precio}</p>
     <button class = "boton-eliminar">Eliminar del carrito</button>
-    </div> `
+    </div> `;
 
-    carritoContainer.appendChild(card)
+    carritoContainer.appendChild(card);
 
     const botonRem = card.querySelector(".boton-eliminar");
-    botonRem.addEventListener ("click", ()=>{
-      eliminarDelCarrito(data);
+    botonRem.addEventListener("click", () => {
+      eliminarDelCarrito(item.id);
     });
 
-    function eliminarDelCarrito(){
+    function eliminarDelCarrito(id) {
+      const index = carrito.findIndex(item=>item.id === id);
       carrito.splice(index);
       localStorage.setItem("carrito", JSON.stringify(carrito));
       carritoContainer.removeChild(card);
       Toastify({
+        text: "Se ha eliminado Correctamente",
 
-        text:"Se ha eliminado Correctamente",
-        
-        duration: 3000
-        
-        }).showToast();
-
-  }
-  })
+        duration: 3000,
+      }).showToast();
+    }
+  });
 });
