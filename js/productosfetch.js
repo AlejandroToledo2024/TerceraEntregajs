@@ -1,5 +1,6 @@
 const cardContenedor = document.getElementById("contenedorDeCartas");
-const carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 fetch("../productos.json")
   .then((response) => response.json())
   .then((data) => {
@@ -11,8 +12,8 @@ fetch("../productos.json")
       <h2>${item.Nombre}</h2>
       <p>${item.descripcion}</p>
       <p>$${item.precio}</p>
-    <button class = "nuevoBtn" >Agregar al carrito</button>
-    </div>
+      <button class = "nuevoBtn" >Agregar al carrito</button>
+      </div>
       `;
       cardContenedor.appendChild(card);
 
@@ -33,8 +34,10 @@ function agregarAlCarrito(item) {
 }
 
 document.getElementById("mostarCarro").addEventListener("click", () => {
-  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   const carritoContainer = document.getElementById("carritoContainer");
+
+  carritoContainer.innerHTML = "";
 
   carrito.forEach((item) => {
     const card = document.createElement("div");
@@ -53,17 +56,20 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
     botonRem.addEventListener("click", () => {
       eliminarDelCarrito(item.id);
     });
-
-    function eliminarDelCarrito(id) {
-      const index = carrito.findIndex(item=>item.id === id);
-      carrito.splice(index);
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      carritoContainer.removeChild(card);
-      Toastify({
-        text: "Se ha eliminado Correctamente",
-
-        duration: 3000,
-      }).showToast();
-    }
   });
 });
+
+function eliminarDelCarrito(id) {
+  const index = carrito.findIndex((item) => item.id === id);
+  if (index !== -1) {
+    carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    document.getElementById("carritoContainer").innerHTML = "";
+    document.getElementById("mostarCarro").click();
+
+    Toastify({
+      text: "Se ha eliminado correctamente",
+      duration: 3000,
+    }).showToast();
+  }
+}
