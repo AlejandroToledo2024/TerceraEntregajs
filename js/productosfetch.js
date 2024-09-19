@@ -42,7 +42,7 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
   carrito.forEach((item) => {
     const card = document.createElement("div");
     card.innerHTML = `
-    <div class="card">
+    <div class="card" >
       <img src= ${item.imageUrl} alt="Imagen del producto">
       <h2>${item.Nombre}</h2>
       <p>${item.descripcion}</p>
@@ -68,7 +68,7 @@ function eliminarDelCarrito(id) {
     document.getElementById("mostarCarro").click();
 
     Toastify({
-      text: "Se ha eliminado correctamente",
+      text:  "Se ha eliminado correctamente",
       duration: 3000,
     }).showToast();
   }
