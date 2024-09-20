@@ -7,7 +7,7 @@ fetch("../productos.json")
     data.forEach((item) => {
       const card = document.createElement("div");
       card.innerHTML = `
-      <div class="card">
+      <div class="card"  >
       <img src= ${item.imageUrl} alt="Imagen del producto">
       <h2>${item.Nombre}</h2>
       <p>${item.descripcion}</p>
@@ -41,6 +41,7 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
 
   carrito.forEach((item) => {
     const card = document.createElement("div");
+    
     card.innerHTML = `
     <div class="card" >
       <img src= ${item.imageUrl} alt="Imagen del producto">
@@ -51,6 +52,7 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
     </div> `;
 
     carritoContainer.appendChild(card);
+    
 
     const botonRem = card.querySelector(".boton-eliminar");
     botonRem.addEventListener("click", () => {
