@@ -41,7 +41,7 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
 
   carrito.forEach((item) => {
     const card = document.createElement("div");
-    
+
     card.innerHTML = `
     <div class="card" >
       <img src= ${item.imageUrl} alt="Imagen del producto">
@@ -52,7 +52,6 @@ document.getElementById("mostarCarro").addEventListener("click", () => {
     </div> `;
 
     carritoContainer.appendChild(card);
-    
 
     const botonRem = card.querySelector(".boton-eliminar");
     botonRem.addEventListener("click", () => {
@@ -70,8 +69,28 @@ function eliminarDelCarrito(id) {
     document.getElementById("mostarCarro").click();
 
     Toastify({
-      text:  "Se ha eliminado correctamente",
+      text: `Se ha eliminado correctamente`,
       duration: 3000,
     }).showToast();
   }
 }
+
+document
+  .getElementById("buttonConfirm")
+  .addEventListener("click", mostrarTotalCompra);
+
+function mostrarTotalCompra() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  let total = 0;
+
+  carrito.forEach((item) => {
+    total += item.precio;
+  });
+  Swal.fire({
+    title: `Compra Realizada el total es de $ ${total}`,
+    text: "Gracias por comprar en Muebleria FEBE",
+    icon: "success",
+  }); // Sumar el precio del producto al total
+
+};
+  

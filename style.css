@@ -221,6 +221,23 @@ section {
   margin-bottom: 100 px;
  
 }
+.confirmarBoton{
+  background-color: lawngreen;
+  color:white;
+  border: solid black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+
+.confirmarBoton:hover {
+  background-color: green;
+}
+.botonCompra{
+  display: flex;
+  justify-content: center;
+}
 
 .nuevoBtnCarro {
   background-color: #007bff;
@@ -231,6 +248,11 @@ section {
   cursor: pointer;
   align-items: center;
 }
+.nuevoBtnCarro:hover{
+  transform: scale(1.5);
+
+}
+
 .nuevoBtn {
   background-color: #007bff;
   color: white;
@@ -238,6 +260,10 @@ section {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+}
+.carritoBoton{
+  display: flex;
+  justify-content: center;
 }
 .mostrarCarrito {
   width: 100%;
@@ -248,18 +274,18 @@ section {
 }
 
 .boton-eliminar {
-  background-color: #e74c3c; /* Rojo */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño del texto */
-  cursor: pointer; /* Mostrar mano al pasar el mouse */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s ease; /* Transición suave */
+  background-color: #e74c3c; 
+  color: white;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
 }
 
 .boton-eliminar:hover {
-  background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+  background-color: #c0392b; 
 }
 
 /*Seccion de Animaciones de Div --------------------------------------------*/

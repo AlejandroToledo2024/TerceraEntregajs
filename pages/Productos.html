@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css" />
     <title>Productos</title>
   </head>
@@ -54,13 +55,20 @@
 
     <div class="cardContainer" id="contenedorDeCartas"></div>
     <h2>CARRO DE COMPRAS</h2>
+    <div class="carritoBoton">
     <button type="button" id="mostarCarro" class="nuevoBtnCarro">
-      &#128722
+     Tus Productos &#128722
     </button>
+    </div>
     <div class="mostrarCarrito" id="carritoContainer">
 
     </div>
-    <button class="">Confirmar Compra</button>
+    <div class="botonCompra">
+    <button class="confirmarBoton" id="buttonConfirm">Confirmar Compra</button>
+    </div>
+    <div class="totalCompra" id ="totalCompra">
+
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer-description">
@@ -75,6 +83,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/productosfetch.js"></script>
 
